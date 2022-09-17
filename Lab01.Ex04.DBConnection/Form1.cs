@@ -10,13 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab01.Ex03.DBConnection
+namespace Lab01.Ex04.DBConnection
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+            this.connection.StateChange += new System.Data.StateChangeEventHandler(this.connection_StateChange);    
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,7 +29,9 @@ namespace Lab01.Ex03.DBConnection
         {
 
         }
+
         OleDbConnection connection = new OleDbConnection();
+
 
         string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=.\SQLEXPRESS";
         private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,6 +69,11 @@ namespace Lab01.Ex03.DBConnection
             }           
             else
                 MessageBox.Show("Соединение с базой данных уже закрыто");
+        }
+        private void connection_StateChange(object sender, System.Data.StateChangeEventArgs e)
+        {
+            connectionToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
+            diToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Open);
         }
     }
 }
