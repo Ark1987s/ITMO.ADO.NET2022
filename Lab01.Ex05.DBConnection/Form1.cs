@@ -28,19 +28,25 @@ namespace Lab01.Ex05.DBConnection
                 returnValue = settings.ConnectionString;
             return returnValue;
         }
+        OleDbConnection connection = new OleDbConnection();
         string testConnect = GetConnectionStringByName("DBConnect.NorthwindConnectionString");
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-        OleDbConnection connection = new OleDbConnection();
+
 
         //    string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=.\SQLEXPRESS";
+        private void connection_StateChange(object sender, System.Data.StateChangeEventArgs e)
+        {
+            connectionToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
+            diToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Open);
+        }
         private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
-            {
+            {                
                 if (connection.State != ConnectionState.Open)
                 {
                     connection.ConnectionString = testConnect;
@@ -73,11 +79,7 @@ namespace Lab01.Ex05.DBConnection
             else
                 MessageBox.Show("Соединение с базой данных уже закрыто");
         }
-        private void connection_StateChange(object sender, System.Data.StateChangeEventArgs e)
-        {
-            connectionToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Closed);
-            diToolStripMenuItem.Enabled = (e.CurrentState == ConnectionState.Open);
-        }
+        
         private void ConnStringToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConnectionStringSettingsCollection settings = ConfigurationManager.ConnectionStrings;
