@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab01.Ex05.DBConnection
+namespace Lab02.Ex02.DBConnection
 {
     public partial class Form1 : Form
     {
@@ -19,7 +19,7 @@ namespace Lab01.Ex05.DBConnection
         {
             InitializeComponent();
             this.connection.StateChange += new System.Data.StateChangeEventHandler(this.connection_StateChange);    
-        }        
+        }
         static string GetConnectionStringByName(string name)
         {
            string returnValue = null;
@@ -27,14 +27,16 @@ namespace Lab01.Ex05.DBConnection
            if (settings != null)
                returnValue = settings.ConnectionString;
            return returnValue;
-        }        
+        }
         string testConnect = GetConnectionStringByName("DBConnect.NorthwindConnectionString");
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-        OleDbConnection connection = new OleDbConnection();      
+
+        OleDbConnection connection = new OleDbConnection();
+
 
     //    string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=.\SQLEXPRESS";
         private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,6 +93,33 @@ namespace Lab01.Ex05.DBConnection
                         MessageBox.Show("connectionString = " + cs.ConnectionString);
                     }
                 }
+        }
+
+        private void products(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "SELECT COUNT(*) FROM Products";
+            int number = (int)command.ExecuteScalar();
+            label1.Text = number.ToString();
+
+        }
+
+        private void ProductsDetails(object sender, EventArgs e)
+        {
+            OleDbCommand command = connection.CreateCommand();
+            command.CommandText = "SELECT ProductName FROM Products";
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                listView1.Items.Add(reader["ProductName"].ToString());
+            }
+
         }
     }
 }
