@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab01.Ex05.DBConnection
+namespace Lab02.Ex01.DBConnection
 {
     public partial class Form1 : Form
     {
@@ -19,7 +19,7 @@ namespace Lab01.Ex05.DBConnection
         {
             InitializeComponent();
             this.connection.StateChange += new System.Data.StateChangeEventHandler(this.connection_StateChange);    
-        }        
+        }
         static string GetConnectionStringByName(string name)
         {
            string returnValue = null;
@@ -93,6 +93,21 @@ namespace Lab01.Ex05.DBConnection
                         MessageBox.Show("connectionString = " + cs.ConnectionString);
                     }
                 }
+        }
+
+        private void products(object sender, EventArgs e)
+        {
+            if (connection.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Сначала подключитесь к базе");
+                return;
+            }
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "SELECT COUNT(*) FROM Products";
+            int number = (int)command.ExecuteScalar();
+            label1.Text = number.ToString();
+
         }
     }
 }
