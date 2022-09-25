@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.northwindDataSet = new Lab04.Ex03.DataAdapterWizard.NorthwindDataSet();
-            this.northwindDataSetBindingSource = new System.Windows.Forms.BindingSource();
+            this.northwindDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.UpdateButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
@@ -48,11 +49,6 @@
             // 
             this.sqlSelectCommand1.CommandText = "SELECT * FROM Customers";
             this.sqlSelectCommand1.Connection = this.sqlConnection1;
-            // 
-            // sqlConnection1
-            // 
-            this.sqlConnection1.ConnectionString = "Data Source=A-NB\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True";
-            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             // 
             // sqlInsertCommand1
             // 
@@ -154,14 +150,17 @@
                         new System.Data.Common.DataColumnMapping("Fax", "Fax")})});
             this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
             // 
+            // sqlConnection1
+            // 
+            this.sqlConnection1.ConnectionString = "Data Source=A-NB\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True";
+            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 223);
             this.dataGridView1.TabIndex = 0;
             // 
             // northwindDataSet
@@ -176,7 +175,7 @@
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(38, 338);
+            this.UpdateButton.Location = new System.Drawing.Point(39, 265);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(142, 23);
             this.UpdateButton.TabIndex = 1;
