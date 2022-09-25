@@ -46,13 +46,13 @@
             this.apressFinancialDataSet = new ControlWork.ApressFinancialDataSet();
             this.Save = new System.Windows.Forms.Button();
             this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
             this.customersTableAdapter = new ControlWork.ApressFinancialDataSetTableAdapters.CustomersTableAdapter();
             this.delete = new System.Windows.Forms.Button();
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apressFinancialDataSet)).BeginInit();
@@ -176,6 +176,11 @@
     "ers";
             this.sqlSelectCommand1.Connection = this.sqlConnection1;
             // 
+            // sqlConnection1
+            // 
+            this.sqlConnection1.ConnectionString = global::ControlWork.Properties.Settings.Default.Conn;
+            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
+            // 
             // sqlInsertCommand1
             // 
             this.sqlInsertCommand1.CommandText = resources.GetString("sqlInsertCommand1.CommandText");
@@ -272,12 +277,6 @@
             this.delete.Text = "Delete";
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.delete_Click);
-            // 
-            // sqlConnection1
-            // 
-            this.sqlConnection1.ConnectionString = global::ControlWork.Properties.Settings.Default.Conn;
-            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
-            this.sqlConnection1.InfoMessage += new System.Data.SqlClient.SqlInfoMessageEventHandler(this.sqlConnection1_InfoMessage);
             // 
             // Form1
             // 

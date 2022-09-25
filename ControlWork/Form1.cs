@@ -67,10 +67,5 @@ namespace ControlWork
         {
             sqlDataAdapter1.Update(apressFinancialDataSet);
         }
-
-        private void sqlConnection1_InfoMessage(object sender, SqlInfoMessageEventArgs e)
-        {
-            MessageBox.Show("ok");
-        }
     }
 }
