@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ControlWork
-{
+{    
     public partial class Form1 : Form
-    {      
+    {  
+          
         public Form1()
         {
             InitializeComponent();
@@ -66,6 +67,11 @@ namespace ControlWork
         private void Save_Click(object sender, EventArgs e)
         {
             sqlDataAdapter1.Update(apressFinancialDataSet);
+        }
+
+        private void sqlConnection1_InfoMessage(object sender, SqlInfoMessageEventArgs e)
+        {
+
         }
     }
 }

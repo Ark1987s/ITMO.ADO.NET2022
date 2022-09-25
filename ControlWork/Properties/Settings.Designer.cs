@@ -37,7 +37,7 @@ namespace ControlWork.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=ApressFinancial;Persist Security Info=Tr" +
-            "ue;User ID=UserB;Password=ultrAlongpw2485")]
+            "ue;User ID=UserB")]
         public string Conn {
             get {
                 return ((string)(this["Conn"]));
