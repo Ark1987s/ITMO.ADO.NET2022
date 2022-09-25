@@ -181,7 +181,6 @@
             this.sqlConnection1.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ApressFinancial;Persist Security Info=Tr" +
     "ue;User ID=UserB;Password=ultrAlongpw2485";
             this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
-            this.sqlConnection1.InfoMessage += new System.Data.SqlClient.SqlInfoMessageEventHandler(this.sqlConnection1_InfoMessage);
             // 
             // sqlInsertCommand1
             // 
