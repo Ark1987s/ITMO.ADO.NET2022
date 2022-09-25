@@ -117,4 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="customersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>472, 17</value>
+  </metadata>
+  <metadata name="apressFinancialDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>296, 17</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>160, 17</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO [CustomerDetails].[Customers] ([CustomerTitleId], [CustomerFirstName], [CustomerOtherInitials], [CustomerLastName], [AddressId], [AccountNumber], [AccountTypeId], [CleareBalance], [UncleareBalance], [DateAdded]) VALUES (@CustomerTitleId, @CustomerFirstName, @CustomerOtherInitials, @CustomerLastName, @AddressId, @AccountNumber, @AccountTypeId, @CleareBalance, @UncleareBalance, @DateAdded);
+SELECT CustomerId, CustomerTitleId, CustomerFirstName, CustomerOtherInitials, CustomerLastName, AddressId, AccountNumber, AccountTypeId, CleareBalance, UncleareBalance, DateAdded FROM CustomerDetails.Customers WHERE (CustomerId = SCOPE_IDENTITY())</value>
+  </data>
+  <metadata name="sqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE [CustomerDetails].[Customers] SET [CustomerTitleId] = @CustomerTitleId, [CustomerFirstName] = @CustomerFirstName, [CustomerOtherInitials] = @CustomerOtherInitials, [CustomerLastName] = @CustomerLastName, [AddressId] = @AddressId, [AccountNumber] = @AccountNumber, [AccountTypeId] = @AccountTypeId, [CleareBalance] = @CleareBalance, [UncleareBalance] = @UncleareBalance, [DateAdded] = @DateAdded WHERE (([CustomerId] = @Original_CustomerId) AND ([CustomerTitleId] = @Original_CustomerTitleId) AND ([CustomerFirstName] = @Original_CustomerFirstName) AND ((@IsNull_CustomerOtherInitials = 1 AND [CustomerOtherInitials] IS NULL) OR ([CustomerOtherInitials] = @Original_CustomerOtherInitials)) AND ([CustomerLastName] = @Original_CustomerLastName) AND ([AddressId] = @Original_AddressId) AND ([AccountNumber] = @Original_AccountNumber) AND ([AccountTypeId] = @Original_AccountTypeId) AND ([CleareBalance] = @Original_CleareBalance) AND ([UncleareBalance] = @Original_UncleareBalance) AND ([DateAdded] = @Original_DateAdded));
+SELECT CustomerId, CustomerTitleId, CustomerFirstName, CustomerOtherInitials, CustomerLastName, AddressId, AccountNumber, AccountTypeId, CleareBalance, UncleareBalance, DateAdded FROM CustomerDetails.Customers WHERE (CustomerId = @CustomerId)</value>
+  </data>
+  <metadata name="sqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="sqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="sqlDeleteCommand1.CommandText" xml:space="preserve">
+    <value>DELETE FROM [CustomerDetails].[Customers] WHERE (([CustomerId] = @Original_CustomerId) AND ([CustomerTitleId] = @Original_CustomerTitleId) AND ([CustomerFirstName] = @Original_CustomerFirstName) AND ((@IsNull_CustomerOtherInitials = 1 AND [CustomerOtherInitials] IS NULL) OR ([CustomerOtherInitials] = @Original_CustomerOtherInitials)) AND ([CustomerLastName] = @Original_CustomerLastName) AND ([AddressId] = @Original_AddressId) AND ([AccountNumber] = @Original_AccountNumber) AND ([AccountTypeId] = @Original_AccountTypeId) AND ([CleareBalance] = @Original_CleareBalance) AND ([UncleareBalance] = @Original_UncleareBalance) AND ([DateAdded] = @Original_DateAdded))</value>
+  </data>
+  <metadata name="sqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="customersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>658, 17</value>
+  </metadata>
 </root>
