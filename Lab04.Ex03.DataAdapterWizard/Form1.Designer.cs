@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.northwindDataSet = new Lab04.Ex03.DataAdapterWizard.NorthwindDataSet();
             this.northwindDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,6 +49,11 @@
             // 
             this.sqlSelectCommand1.CommandText = "SELECT * FROM Customers";
             this.sqlSelectCommand1.Connection = this.sqlConnection1;
+            // 
+            // sqlConnection1
+            // 
+            this.sqlConnection1.ConnectionString = "Data Source=A-NB\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True";
+            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             // 
             // sqlInsertCommand1
             // 
@@ -149,11 +154,6 @@
                         new System.Data.Common.DataColumnMapping("Phone", "Phone"),
                         new System.Data.Common.DataColumnMapping("Fax", "Fax")})});
             this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
-            // 
-            // sqlConnection1
-            // 
-            this.sqlConnection1.ConnectionString = "Data Source=A-NB\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True";
-            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             // 
             // dataGridView1
             // 
