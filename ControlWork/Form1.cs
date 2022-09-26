@@ -12,10 +12,11 @@ using System.Windows.Forms;
 namespace ControlWork
 {    
     public partial class Form1 : Form
-    {            
+    {        
         public Form1()
         {           
             InitializeComponent();
+            sqlConnection1.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ApressFinancial;Persist Security Info=True;User ID=UserB;Password=ultrAlongpw2485";
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -26,34 +27,12 @@ namespace ControlWork
         {
 
         }
-        private void Adapter_RowUpdating(object sender, System.Data.SqlClient.SqlRowUpdatingEventArgs e)
-        {
-            ApressFinancialDataSet.CustomersRow CustRow = (ApressFinancialDataSet.CustomersRow)e.Row;
-            DialogResult response = MessageBox.Show("Continue updating " + CustRow.CustomerId.ToString() + "?", "Continue Update?", MessageBoxButtons.YesNo);
-            if (response == DialogResult.No)
-            {
-                e.Status = UpdateStatus.SkipCurrentRow;
-            }
-        }
         private void Adapter_RowUpdated(object sender, System.Data.SqlClient.SqlRowUpdatedEventArgs e)
         {
             ApressFinancialDataSet.CustomersRow CustRow = (ApressFinancialDataSet.CustomersRow)e.Row;
             MessageBox.Show(CustRow.CustomerId.ToString() + " has been updated");
             apressFinancialDataSet.Customers.Clear();
             sqlDataAdapter1.Fill(apressFinancialDataSet);
-        }
-        private void adapter_FillError(object sender, FillErrorEventArgs e)
-        {
-            DialogResult response = MessageBox.Show("The following error occurred while Filling the DataSet: "
-                + e.Errors.Message.ToString() + " Continue attempting to fill?", "FillError Encountered", MessageBoxButtons.YesNo);
-            if (response == DialogResult.Yes)
-            {
-                e.Continue = true;
-            }
-            else
-            {
-                e.Continue = false;
-            }
         }
 
         private void delete_Click(object sender, EventArgs e)
