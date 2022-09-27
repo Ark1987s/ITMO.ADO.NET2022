@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ControlWork
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
@@ -15,8 +15,18 @@ namespace ControlWork
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.SetCompatibleTextRenderingDefault(false);         
+            Start login = new Start();
+            Application.Run(login);
+            if (login.LoginSuccess)
+            {
+                Main fMain = new Main();
+                Application.Run(fMain);
+            }
+            else
+            {
+                MessageBox.Show("Ошибка доступа к MS SQL Server!");
+            }
         }
     }        
 }
