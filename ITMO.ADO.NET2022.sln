@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07.Ex01.Linq_Student", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07.Ex02.Linq_Student", "Lab07.Ex02.Linq_Student\Lab07.Ex02.Linq_Student.csproj", "{1A4256F0-0464-405B-9105-046CEAEE4EF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07.Ex03.Linq_Student", "Lab07.Ex03.Linq_Student\Lab07.Ex03.Linq_Student.csproj", "{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{1A4256F0-0464-405B-9105-046CEAEE4EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A4256F0-0464-405B-9105-046CEAEE4EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A4256F0-0464-405B-9105-046CEAEE4EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
