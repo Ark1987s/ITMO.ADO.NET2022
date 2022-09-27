@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab04.Ex05.WorkingDataTable
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab04.Ex06.DataViewExample", "Lab04.Ex06.DataViewExample\Lab04.Ex06.DataViewExample.csproj", "{248530A9-5D44-49F1-A89E-464C105EDC89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07.Ex01.Linq_Student", "Lab07.Ex01.Linq_Student\Lab07.Ex01.Linq_Student.csproj", "{DC8E24A2-AF5E-4320-9F2B-E23328EFC789}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07.Ex02.Linq_Student", "Lab07.Ex02.Linq_Student\Lab07.Ex02.Linq_Student.csproj", "{1A4256F0-0464-405B-9105-046CEAEE4EF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{248530A9-5D44-49F1-A89E-464C105EDC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{248530A9-5D44-49F1-A89E-464C105EDC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{248530A9-5D44-49F1-A89E-464C105EDC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8E24A2-AF5E-4320-9F2B-E23328EFC789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8E24A2-AF5E-4320-9F2B-E23328EFC789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8E24A2-AF5E-4320-9F2B-E23328EFC789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8E24A2-AF5E-4320-9F2B-E23328EFC789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4256F0-0464-405B-9105-046CEAEE4EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4256F0-0464-405B-9105-046CEAEE4EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4256F0-0464-405B-9105-046CEAEE4EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4256F0-0464-405B-9105-046CEAEE4EF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
