@@ -27,7 +27,9 @@ namespace ControlWork
                 try
                 {
                     cn.Open();
-                    LoginSuccess = true;                   
+                    LoginSuccess = true;
+                    Data.login = loginBox.Text;
+                    Data.password = pwBox.Text;
                 }
                 catch (Exception ex)
                 {
@@ -36,5 +38,9 @@ namespace ControlWork
             }
             Close();
         }
+    }
+    static class Data
+    {
+        public static string login, password;
     }
 }
