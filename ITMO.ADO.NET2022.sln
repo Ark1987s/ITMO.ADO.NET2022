@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07.Ex02.Linq_Student", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07.Ex03.Linq_Student", "Lab07.Ex03.Linq_Student\Lab07.Ex03.Linq_Student.csproj", "{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab09.Ex01.CustomerManager", "Lab09.Ex01.CustomerManager\Lab09.Ex01.CustomerManager.csproj", "{6309F7EA-1709-43E6-B26D-AECC3CC60048}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab09.Ex01.CodeFirst", "Lab09.Ex01.CodeFirst\Lab09.Ex01.CodeFirst.csproj", "{B74F64FC-A619-4817-B6E7-09DD4A9CC620}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA12A90A-E60B-4BD0-AEB6-4DBDFB1D7B4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6309F7EA-1709-43E6-B26D-AECC3CC60048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6309F7EA-1709-43E6-B26D-AECC3CC60048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6309F7EA-1709-43E6-B26D-AECC3CC60048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6309F7EA-1709-43E6-B26D-AECC3CC60048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74F64FC-A619-4817-B6E7-09DD4A9CC620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74F64FC-A619-4817-B6E7-09DD4A9CC620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74F64FC-A619-4817-B6E7-09DD4A9CC620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74F64FC-A619-4817-B6E7-09DD4A9CC620}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
